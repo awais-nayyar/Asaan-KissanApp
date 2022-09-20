@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.asaankissan">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AsaanKissan">
+        <activity
+            android:name=".activities.UserGuideActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreen"/>
+        <activity
+            android:name=".activities.AdSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AdDetailImagesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoAsaanKissan" />
+        <activity
+            android:name=".activities.CategoryAdsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoAsaanKissan" />
+        <activity
+            android:name=".activities.AdPostingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoAsaanKissan" />
+        <activity
+            android:name=".activities.GoogleSignupActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoAsaanKissan" />
+        <activity
+            android:name=".activities.AdsDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoAsaanKissan" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoAsaanKissan" />
+        <activity
+            android:name=".activities.SignInActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoAsaanKissan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SignUpActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden" />
+    </application>
+
+</manifest>

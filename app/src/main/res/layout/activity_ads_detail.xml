@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AdsDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                app:sliderAnimationDuration="1000"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="false"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="false" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="310dp"
+                android:background="@color/white"
+                android:elevation="0dp"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tvAdPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_slab_font_wght"
+                        android:text="RS 300"
+                        android:textColor="@color/Green"
+                        android:textSize="@dimen/TitleTextSize"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivAdDetail"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_menu_gallery" />
+
+                    <TextView
+                        android:id="@+id/tvAdTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAdPrice"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/roboto_slab_font_wght"
+                        android:maxLines="2"
+                        android:text="Vegetable Fresh available here"
+                        android:textColor="@color/BlackNormal"
+                        android:textSize="@dimen/wellcomeTextSize"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivAdLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAdTitle"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/ic_baseline_location_on_24" />
+
+                    <TextView
+                        android:id="@+id/tvAdLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAdTitle"
+                        android:layout_marginTop="6dp"
+                        android:layout_toEndOf="@+id/ivAdLocation"
+                        android:text="Multan,Punjab" />
+
+                    <TextView
+                        android:id="@+id/tvAdUploadTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAdTitle"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"
+                        android:layout_marginTop="6dp"
+                        android:text="21-4-2000" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivAdLocation"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_rectangular_adpost_container"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/tvAdDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/roboto_slab_font_wght"
+                            android:text="Details"
+                            android:textColor="@color/BlackNormal"
+                            android:textSize="@dimen/defaultTextSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvAdTypePlaceholder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvAdDetails"
+                            android:layout_marginEnd="18dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/roboto_slab_font_wght"
+                            android:text="Type" />
+
+                        <TextView
+                            android:id="@+id/tvAdType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvAdDetails"
+                            android:layout_toEndOf="@+id/tvAdTypePlaceholder"
+                            android:fontFamily="@font/roboto_slab_font_wght"
+                            android:text="Commodities"
+                            android:textColor="@color/BlackNormal"
+                            android:textSize="@dimen/defaultTextSize"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlDetails"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_rectangular_adpost_container"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/tvAdDescriptionPlaceholder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/roboto_slab_font_wght"
+                            android:text="Description"
+                            android:textColor="@color/BlackNormal"
+                            android:textSize="@dimen/defaultTextSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvAdDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvAdDescriptionPlaceholder"
+                            android:fontFamily="@font/roboto_slab_font_wght"
+                            android:text="This is my ad, This is my AdThis is my ad, This is my AdThis is my ad, This is my AdThis is my ad, This is my Ad"
+                            android:textSize="@dimen/defaultTextSize" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlDescription"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="80dp"
+                        android:background="@drawable/bg_rectangular_adpost_container"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/tvAdLocationPlaceholder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/roboto_slab_font_wght"
+                            android:text="Address"
+                            android:textColor="@color/BlackNormal"
+                            android:textSize="@dimen/defaultTextSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvAdLocationAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvAdLocationPlaceholder"
+                            android:fontFamily="@font/roboto_slab_font_wght"
+                            android:text=" This is my AdThis is my ad, This is my AdThis is my ad, This is my Ad"
+                            android:textSize="@dimen/defaultTextSize" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:padding="12dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibWhatsApp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:background="@drawable/bg_rectangular_contact_first_btn"
+            android:src="@drawable/ic_whatsapp"
+            android:layout_marginEnd="2dp"/>
+
+        <ImageButton
+            android:id="@+id/ibMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:background="@drawable/bg_rectangular_contact_center_btn"
+            android:src="@drawable/ic_baseline_message_24"
+            android:layout_marginEnd="2dp"/>
+
+        <ImageButton
+            android:id="@+id/ibCall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:background="@drawable/bg_rectangular_contact_last_btn"
+            android:src="@drawable/ic_baseline_call_24"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

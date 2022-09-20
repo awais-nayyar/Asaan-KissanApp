@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_gravity="center"
+        tools:context=".activities.GoogleSignupActivity">
+
+        <TextView
+            android:id="@+id/tvWellcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_slab_font_wght"
+            android:gravity="center"
+            android:text="Welcome to Asaan Kissan,click on google signup button to continue"
+            android:textColor="@color/Green"
+            android:textSize="24dp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/tvWellcome"
+            android:layout_marginTop="8dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/farmer_white"/>
+
+        <Button
+            android:id="@+id/btnSignupGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lottie"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_google"
+            android:drawablePadding="4dp"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:text="Signup with google"
+            android:textStyle="bold"
+            app:cornerRadius="28dp" />
+
+        <Button
+            android:id="@+id/btnHowToUse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSignupGoogle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="4dp"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:text="How to use This app"
+            android:textStyle="bold"
+            app:cornerRadius="28dp" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+</ScrollView>

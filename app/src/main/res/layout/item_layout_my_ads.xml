@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="14dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivAd"
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/vegetables" />
+
+            <TextView
+                android:id="@+id/tvAdTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/ivAd"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:maxLines="1"
+                android:text="Fresh vegetables"
+                android:textColor="@color/BlackNormal"
+                android:textSize="@dimen/TitleTextSize" />
+
+            <TextView
+                android:id="@+id/tvAdMeasure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/tvAdTitle"
+                android:layout_toStartOf="@+id/ivMyAdDelete"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:maxLines="2"
+                android:paddingStart="8dp"
+                android:text="1 kg"
+                android:textColor="#FFC107"
+                android:textSize="@dimen/TitleTextSize" />
+
+            <TextView
+                android:id="@+id/tvAdDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAdTitle"
+                android:layout_toEndOf="@+id/ivAd"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="this is the description"
+                android:textSize="@dimen/defaultTextSize" />
+
+            <TextView
+                android:id="@+id/tvAdPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAdDescription"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/ivAd"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:maxLines="1"
+                android:text="RS: 500"
+                android:textColor="@color/Green"
+                android:textSize="@dimen/TitleTextSize" />
+
+            <ImageView
+                android:id="@+id/ivAdLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAdPrice"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_toEndOf="@+id/ivAd"
+                android:src="@drawable/ic_baseline_location_on_24" />
+
+            <TextView
+                android:id="@+id/tvAdLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAdPrice"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/ivAdLocation"
+                android:text="Multan,Punjab"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tvAdUploadTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="21-4-2022" />
+
+            <ImageButton
+                android:id="@+id/ivMyAdDelete"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="#2DFF0000"
+                android:src="@drawable/ic_baseline_delete_forever_24" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

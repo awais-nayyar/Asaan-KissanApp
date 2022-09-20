@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mainPadding">14dp</dimen>
+    <dimen name="gapBetweenEditTextsPadding">8dp</dimen>
+    <dimen name="cardViewTopBottomPadding">8dp</dimen>
+    <dimen name="cardCornerRadius">12dp</dimen>
+    <dimen name="wellcomeTextSize">20sp</dimen>
+    <dimen name="defaultTextSize">16sp</dimen>
+    <dimen name="TitleTextSize">18sp</dimen>
+    <dimen name="drawablePadding">12dp</dimen>
+    <dimen name="chooseImageTopBottomMargin">8dp</dimen>
+
+</resources>

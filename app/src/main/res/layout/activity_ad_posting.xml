@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.AdPostingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/bg_rectangular_toolbar"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal"
+        android:text="Post your Ad"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMainSell"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@color/white"
+        android:elevation="0dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="0dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/mainPadding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/roboto_slab_font_wght"
+                    android:gravity="center_horizontal"
+                    android:text="Enter details about your Ad."
+                    android:textColor="@color/BlackNormal"
+                    android:textSize="@dimen/wellcomeTextSize"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAdTitle"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Ad Title"
+                    app:boxStrokeColor="@color/Green">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieAdTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/chooseImageTopBottomMargin"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:maxLines="1"
+                        android:textColor="@color/Green" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/chooseImageTopBottomMargin"
+                    android:layout_marginBottom="@dimen/chooseImageTopBottomMargin"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnProfile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="6dp"
+                        android:text="profile image"/>
+
+
+                </LinearLayout>-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAdDescription"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Ad Description"
+                    app:boxStrokeColor="@color/Green">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieAdDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:maxLines="2"
+                        android:textColor="@color/Green" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_rectangular_profile_image"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnUploadImages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/bg_rectangular_sign_in"
+                        android:fontFamily="@font/roboto_slab_font_wght"
+                        android:text="Upload Images"
+                        android:textColor="@color/white" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvImages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"/>
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:indeterminateTint="@color/Green"
+                            android:padding="12dp"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rectangular_adpost_container"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/roboto_slab_font_wght"
+                        android:text="Set Price"
+                        android:textColor="@color/BlackNormal"
+                        android:textSize="@dimen/wellcomeTextSize" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="Your price must be in ruppees" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAdPrice"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:hint="Enter Price"
+                        app:boxStrokeColor="@color/Green">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieAdPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/chooseImageTopBottomMargin"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:maxLines="1"
+                            android:inputType="number"
+                            android:textColor="@color/Green" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAdMeasure"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Enter Measure"
+                        app:boxStrokeColor="@color/Green">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieAdMeasure"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/chooseImageTopBottomMargin"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:maxLines="1"
+                            android:textColor="@color/Green" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_rectangular_adpost_container"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/roboto_slab_font_wght"
+                        android:text="Location Information"
+                        android:textColor="@color/BlackNormal"
+                        android:textSize="@dimen/wellcomeTextSize" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:gravity="center_horizontal"
+                        android:text="Enter your accurate address after selecting city" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+
+                            android:id="@+id/etSelectCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="6dp"
+                            android:background="@drawable/bg_rectangular_mobile_number_green"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textColor="@color/Green"
+                            android:hint="Select City"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:padding="16dp" />
+
+                        <ImageButton
+                            android:id="@+id/ivSelectCity"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_baseline_expand_more_24"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="6dp"
+                            />
+                    </RelativeLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/tilAddress"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Enter Address"
+                        app:boxStrokeColor="@color/Green">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/chooseImageTopBottomMargin"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:maxLines="2"
+                            android:textColor="@color/Green" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_rectangular_adpost_container"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/roboto_slab_font_wght"
+                        android:text="Contact Information"
+                        android:textColor="@color/BlackNormal"
+                        android:textSize="@dimen/wellcomeTextSize" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Start entering without 0, like 305xxxxxxx" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/chooseImageTopBottomMargin"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="62dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="@dimen/chooseImageTopBottomMargin"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_rectangular_mobile_number_green"
+                            android:gravity="center"
+                            android:text="+92"
+                            android:textColor="@color/Green"
+                            android:textSize="@dimen/defaultTextSize" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilPhoneNumber"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:hint="Phone number"
+                            app:boxStrokeColor="@color/Green">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tiePhoneNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed-medium"
+                                android:maxLines="1"
+                                android:textColor="@color/Green" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPostAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_rectangular_sign_in"
+                    android:fontFamily="@font/roboto_slab_font_wght"
+                    android:padding="4dp"
+                    android:text="Post Ad now!"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/defaultTextSize" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

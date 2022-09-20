@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.SellFragment">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/bg_rectangular_toolbar"
+            app:titleTextColor="@color/white" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal"
+            android:text="Ads category"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMainSell"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:background="@color/white"
+            android:elevation="0dp"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="0dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSelectCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_slab_font_wght"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="@string/select_category"
+                        android:textColor="@color/BlackNormal"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCategories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:shimmer_auto_start="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@color/shimmerColor"
+            app:titleTextColor="@color/white" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMainSell1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:background="@color/white"
+            android:elevation="0dp"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="0dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSelectCategory1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_slab_font_wght"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="this is my"
+                        android:textColor="@color/shimmerColor"
+                        android:textStyle="bold"
+                        android:background="@color/shimmerColor"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="180dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="3dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true"
+                            app:contentPadding="4dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/rivCategories"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:scaleType="centerCrop"
+                                    app:riv_corner_radius="20dp"
+                                    app:riv_mutate_background="true"
+                                    android:src="@color/shimmerColor"/>
+
+                                <TextView
+                                    android:id="@+id/tvCategories"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_slab_font_wght"
+                                    android:text="Category"
+                                    android:textColor="@color/shimmerColor"
+                                    android:layout_marginTop="6dp"
+                                    android:background="@color/shimmerColor"
+                                    android:textSize="@dimen/defaultTextSize" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="180dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="3dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true"
+                            app:contentPadding="4dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/rivCategories1"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:scaleType="centerCrop"
+                                    app:riv_corner_radius="20dp"
+                                    app:riv_mutate_background="true"
+                                    android:src="@color/shimmerColor"/>
+
+                                <TextView
+                                    android:id="@+id/tvCategories1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_slab_font_wght"
+                                    android:text="Category"
+                                    android:layout_marginTop="6dp"
+                                    android:background="@color/shimmerColor"
+                                    android:textColor="@color/shimmerColor"
+                                    android:textSize="@dimen/defaultTextSize" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView8"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="180dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="3dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true"
+                            app:contentPadding="4dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/rivCategories8"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:scaleType="centerCrop"
+                                    app:riv_corner_radius="20dp"
+                                    app:riv_mutate_background="true"
+                                    android:src="@color/shimmerColor"/>
+
+                                <TextView
+                                    android:id="@+id/tvCategories8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_slab_font_wght"
+                                    android:text="Category"
+                                    android:textColor="@color/shimmerColor"
+                                    android:layout_marginTop="6dp"
+                                    android:background="@color/shimmerColor"
+                                    android:textSize="@dimen/defaultTextSize" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="180dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="3dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true"
+                            app:contentPadding="4dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/rivCategories2"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:scaleType="centerCrop"
+                                    app:riv_corner_radius="20dp"
+                                    app:riv_mutate_background="true"
+                                    android:src="@color/shimmerColor"/>
+
+                                <TextView
+                                    android:id="@+id/tvCategories2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_slab_font_wght"
+                                    android:text="Category"
+                                    android:layout_marginTop="6dp"
+                                    android:background="@color/shimmerColor"
+                                    android:textColor="@color/shimmerColor"
+                                    android:textSize="@dimen/defaultTextSize" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardVie3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="180dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="3dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true"
+                            app:contentPadding="4dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/rivCategories3"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:scaleType="centerCrop"
+                                    app:riv_corner_radius="20dp"
+                                    app:riv_mutate_background="true"
+                                    android:src="@color/shimmerColor"/>
+
+                                <TextView
+                                    android:id="@+id/tvCategories3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_slab_font_wght"
+                                    android:text="Category"
+                                    android:textColor="@color/shimmerColor"
+                                    android:layout_marginTop="6dp"
+                                    android:background="@color/shimmerColor"
+                                    android:textSize="@dimen/defaultTextSize" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="180dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="3dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true"
+                            app:contentPadding="4dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/rivCategories7"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:scaleType="centerCrop"
+                                    app:riv_corner_radius="20dp"
+                                    app:riv_mutate_background="true"
+                                    android:src="@color/shimmerColor"/>
+
+                                <TextView
+                                    android:id="@+id/tvCategories7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_slab_font_wght"
+                                    android:text="Category"
+                                    android:layout_marginTop="6dp"
+                                    android:background="@color/shimmerColor"
+                                    android:textColor="@color/shimmerColor"
+                                    android:textSize="@dimen/defaultTextSize" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardVie4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="180dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="3dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true"
+                            app:contentPadding="4dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/rivCategories4"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:scaleType="centerCrop"
+                                    app:riv_corner_radius="20dp"
+                                    app:riv_mutate_background="true"
+                                    android:src="@color/shimmerColor"/>
+
+                                <TextView
+                                    android:id="@+id/tvCategories4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_slab_font_wght"
+                                    android:text="Category"
+                                    android:textColor="@color/shimmerColor"
+                                    android:layout_marginTop="6dp"
+                                    android:background="@color/shimmerColor"
+                                    android:textSize="@dimen/defaultTextSize" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView5"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="180dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="3dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true"
+                            app:contentPadding="4dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/rivCategories5"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:scaleType="centerCrop"
+                                    app:riv_corner_radius="20dp"
+                                    app:riv_mutate_background="true"
+                                    android:src="@color/shimmerColor"/>
+
+                                <TextView
+                                    android:id="@+id/tvCategories5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_slab_font_wght"
+                                    android:text="Category"
+                                    android:layout_marginTop="6dp"
+                                    android:background="@color/shimmerColor"
+                                    android:textColor="@color/shimmerColor"
+                                    android:textSize="@dimen/defaultTextSize" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.cardview.widget.CardView>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+</RelativeLayout>

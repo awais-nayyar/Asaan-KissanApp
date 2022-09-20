@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:id="@+id/ivProductFresh"
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/tvProductNameFresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:maxLines="1"
+                android:text="product name"
+                android:textColor="@color/BlackNormal"
+                android:textSize="@dimen/defaultTextSize" />
+
+            <TextView
+                android:id="@+id/tvAdMeasure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="4dp"
+                android:maxLines="2"
+                android:text="1 kg"
+                android:textColor="#FFC107"
+                android:textSize="@dimen/defaultTextSize" />
+
+            <TextView
+                android:id="@+id/tvProductDescriptionFresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:lines="2"
+                android:ellipsize="end"
+                android:text="product descripiton"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/Gray"
+                android:textSize="14sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <TextView
+                android:id="@+id/tvProductPriceFresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="RS: 9000"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/Green"
+                android:textSize="@dimen/defaultTextSize"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp">
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/ic_baseline_location_on_24"/>
+
+                <TextView
+                    android:id="@+id/tvProductLocationFresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/ivLocation"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Gali no.2 muhalla Gali Hospital wali" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="true"
+    app:contentPadding="4dp"
+    app:cardElevation="6dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:text="Edit your details here"
+                android:fontFamily="@font/roboto_slab_font_wght"
+                android:textColor="@color/BlackNormal"
+                android:textSize="@dimen/TitleTextSize"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fruits"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Awais Nayyar"
+                    android:textColor="@color/Green"
+                    android:fontFamily="sans-serif-condensed-medium" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/chooseImageTopBottomMargin"
+                android:layout_marginBottom="@dimen/chooseImageTopBottomMargin"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:text="+92"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:textColor="@color/Green"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_marginBottom="@dimen/chooseImageTopBottomMargin"
+                    android:background="@drawable/bg_rectangular_mobile_number_green"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/Green"
+                    android:hint="Phone number">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiePhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/Green"
+                        android:maxLines="1"
+                        android:text="0305678954"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="City">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Multan"
+                    android:textColor="@color/Green"
+                    android:fontFamily="sans-serif-condensed-medium" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEditProfileSave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:fontFamily="@font/roboto_slab_font_wght"
+                    android:background="@drawable/bg_rectangular_sign_in"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="18dp"
+                    android:padding="4dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEditProfileCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="cancel"
+                    android:fontFamily="@font/roboto_slab_font_wght"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/defaultTextSize"
+                    android:background="@drawable/bg_rectangular_edit_profile_cancel"
+                    android:layout_marginTop="20dp"
+                    android:padding="4dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>
